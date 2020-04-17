@@ -6,8 +6,6 @@ name: Test playbook
  
  
    tasks: 
- 
- 
    - name: installing the httpd packages on {{ ansible_hostname }} 
      yum: 
        name: httpd 
@@ -25,13 +23,3 @@ name: Test playbook
      copy: 
        content: Apache page from host {{ ansible_hostname }} and IP is {{ ansible_enp0s8.ipv4.address }} and kernel ver {{ ansible_kernel }} and Memory sise is {{ ansible_memory_mb.real.total }} 
        dest: /var/www/html/index.html 
- 
- 
-   - name: raw command run 
-     shell: hostname; whoami 
-     register: shelloutput 
- 
- 
-   - name: checking the output 
-     debug: 
-       var: shelloutput.stdout_lines  
