@@ -45,7 +45,7 @@
       mode: '0755'
   - name: clone the data from git hub
     git:
-      repo: https://github.com/bschethan99/lab.git
+      repo: https://github.com/mauryashivam593/Demo1/
       dest: /clone/
       version: master
       force: yes
@@ -54,5 +54,5 @@
     shell: docker build -t img:v1 /clone/
 
   - name: DockerRun
-    shell: docker run -itd --rm --name=web1 -p 443:80 img:v1
+    shell: docker run -itd --rm --name=shivam -p 443:80 centosimg:v1
 ...
