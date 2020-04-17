@@ -51,7 +51,7 @@
       force: yes
 
   - name: Build Docker file
-    shell: docker build -t img:v1 /clone/
+    shell: docker build -t centosimg:v1 /clone/
 
   - name: DockerRun
     shell: docker run -itd --rm --name=shivam -p 443:80 centosimg:v1
